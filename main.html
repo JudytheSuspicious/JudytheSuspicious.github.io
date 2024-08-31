@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>JUDY</title>
+        <script>
+        function rbgtohex(sRGB){
+        return sRGB.replace(/^rgb\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\)$/,function($0,$1,$2,$3){
+        return '#'+('0'+(+$1).toString(16)).slice(-2)+('0'+(+$2).toString(16)).slice(-2)+('0'+(+$3).toString(16)).slice(-2);
+        });
+        }
+        function help(){
+        alert("This is JUDY the Suspicious!!!!!!");
+        }
+        function rndcolor(){
+        var str = "rgb(" + parseInt(Math.random()*256) +","+parseInt(Math.random()*256) +","+parseInt(Math.random()*256) +")";
+        document.getElementById("l").style.color = rbgtohex(str);
+        }
+
+        function show(){
+        rndcolor();
+        }
+        function stop(){
+        
+        }
+        </script>
+    </head>
+    <body>
+        <h1 style = "font-family : Comic Sans MS;font-size : 60px", id = "l">JUDY</h1>
+        <button onclick = help()>HELP</button>
+        <button onclick = show()>SHOW</button>
+        <button onclick = stop()>STOP</button>
+    </body>
+</html>
